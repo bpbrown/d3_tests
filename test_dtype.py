@@ -18,7 +18,7 @@ else:
 
 c = de.SphericalCoordinates('phi', 'theta', 'r')
 d = de.Distributor((c,), mesh=mesh, dtype=np.float64)
-b = de.BallBasis(c, (nm,Lmax+1,Nmax+1), radius=radius, dealias=(L_dealias,L_dealias,N_dealias))
+b = de.BallBasis(c, (nm,Lmax+1,Nmax+1), radius=radius, dealias=(L_dealias,L_dealias,N_dealias), dtype=np.float64)
 phi1, theta1, r1 = b.local_grids((1,1,1))
 phi, theta, r = b.local_grids((L_dealias,L_dealias,N_dealias))
 
